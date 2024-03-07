@@ -1,0 +1,980 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: content-box;
+  scroll-behavior: smooth;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  overflow-x: hidden;
+  background-color: #151515;
+}
+body .navbar {
+  display: none;
+  background-color: #222222;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 9999;
+}
+body .navbar .container-fluid {
+  margin: 0 auto;
+}
+body .navbar .container-fluid .navbar-brand {
+  text-transform: uppercase;
+  font-size: 2rem;
+  color: #fff;
+}
+body .navbar .container-fluid .navbar-brand .name {
+  color: #635985;
+  font-size: 2.5rem;
+  font-weight: 600;
+}
+body .navbar .container-fluid button {
+  border: 1px solid #635985;
+  background-color: rgba(99, 89, 133, 0.6588235294);
+  box-shadow: 0px 0px 18px #635985;
+  transition: all 1s ease 0s;
+  margin-right: 40px;
+}
+body .navbar .container-fluid .collapse {
+  margin: 30px;
+}
+body .navbar .container-fluid .collapse .navbar-nav .nav-item {
+  list-style: none;
+}
+body .navbar .container-fluid .collapse .navbar-nav .nav-item .nav-link {
+  display: inline-block;
+  font-size: 0.9rem;
+  font-weight: 400;
+  padding-block: 20px;
+  text-transform: capitalize;
+  transition: all 1s ease 0s;
+  text-decoration: none;
+  color: #fff;
+}
+body .navbar .container-fluid .collapse .navbar-nav .nav-item .nav-link .fa {
+  padding-right: 10px;
+}
+body .navbar .container-fluid .collapse .navbar-nav .nav-item .nav-link:hover {
+  letter-spacing: 5px;
+  color: #635985;
+  transition: all 1s ease 0s;
+}
+body .row .aside {
+  background-color: #222222;
+  width: 17%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 999;
+  display: block;
+}
+body .row .aside aside {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+body .row .aside aside .logo {
+  margin: 0 auto;
+  padding-top: 20px;
+}
+body .row .aside aside .logo a {
+  text-decoration: none;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 65px;
+  padding: 10px;
+}
+body .row .aside aside .logo a span {
+  color: #635985;
+  font-size: 80px;
+  font-weight: 600;
+}
+body .row .aside aside .link {
+  display: flex;
+}
+body .row .aside aside .link ul {
+  margin-top: 40px;
+}
+body .row .aside aside .link ul li {
+  list-style: none;
+}
+body .row .aside aside .link ul li a {
+  text-decoration: none;
+  color: #fff;
+  display: inline-block;
+  font-size: 20px;
+  font-weight: 400;
+  padding-block: 20px;
+  text-transform: capitalize;
+  transition: all 1s ease-out 0s;
+}
+body .row .aside aside .link ul li a .fa {
+  padding-right: 10px;
+}
+body .row .aside aside .link ul li a:hover {
+  letter-spacing: 2px;
+  color: #635985;
+  transition: all 1s ease-out 0s;
+}
+body .row .aside aside .link ul li a:active {
+  color: #635985;
+}
+body .row #particles-js {
+  background-color: #151515;
+  position: fixed;
+  z-index: 1;
+}
+body .row .main main {
+  width: 81.3%;
+  height: 100vh;
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  overflow: hidden;
+}
+body .row .main main .text {
+  width: 55%;
+  color: #fff;
+  z-index: 2;
+}
+body .row .main main .text .name {
+  font-size: 23px;
+  font-weight: 700;
+}
+body .row .main main .text .name span {
+  font-size: 35px;
+  color: #635985;
+  font-weight: 400;
+  font-family: "Cinzel", serif;
+}
+body .row .main main .text .go {
+  width: 535px;
+  overflow: hidden;
+  height: -moz-fit-content;
+  height: fit-content;
+  border-right: 3px solid #fff;
+  transition: all 10s ease-in-out 10s;
+  animation: 10s go steps(25) infinite;
+}
+body .row .main main .text .go h1 {
+  width: 600px;
+}
+body .row .main main .text .go h1 span {
+  color: #635985;
+}
+body .row .main main .text .body {
+  font-size: 14px;
+  padding-bottom: 20px;
+  padding: 20px 0px;
+}
+body .row .main main .text .button {
+  background-color: #151515;
+  border: 3px solid #635985;
+  padding: 13px 20px;
+  color: #fff;
+  font-size: 18px;
+  transition: all 1s ease 0s;
+  box-shadow: 0px 0px 18px #635985;
+  animation-name: btn2;
+  transition: all 2s ease 0s;
+  box-shadow: 0px 0px 5px #635985;
+}
+body .row .main main .text .button a {
+  text-decoration: none;
+  color: #fff;
+}
+body .row .main main .text .button:hover {
+  letter-spacing: 5px;
+  transition: all 1s ease 0s;
+  box-shadow: 0px 0px 18px #fff;
+  background-color: #222222;
+  animation-name: btn;
+}
+body .row .main main .img {
+  width: 40%;
+  transition: all 1s ease 0s;
+  z-index: 2;
+}
+body .row .main main .img img {
+  width: 100%;
+}
+body section {
+  background: #151515;
+  width: 81.3%;
+  height: -moz-fit-content;
+  height: fit-content;
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  padding-bottom: 40px;
+}
+body section .title {
+  margin: 25px;
+  padding: 10px;
+  width: -moz-fit-content;
+  width: fit-content;
+  z-index: 555;
+}
+body section .title h2 {
+  color: white;
+  font-size: 45px;
+  font-weight: 400;
+  padding: 20px;
+  border-bottom: 2px solid #635985;
+}
+body section .title .span-h2 {
+  position: absolute;
+  top: 40px;
+  left: 130px;
+  color: rgba(99, 89, 133, 0.1921568627);
+  font-size: 80px;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+  font-weight: 800;
+}
+body section .skills {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+body section .skills .card {
+  width: 15%;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 10px;
+  text-align: center;
+  margin: 25px;
+  background-color: #252525;
+  box-shadow: 0px 0px 18px #635985;
+  border: none;
+  transition: all 1s ease 0s;
+}
+body section .skills .card .icon {
+  padding: 15px;
+}
+body section .skills .card .card-body .card-text {
+  font-size: 23px;
+  font-weight: 600;
+  color: #fff;
+}
+body section .skills .card:hover {
+  box-shadow: 0px 0px 18px #fff;
+  transform: scale(1.1);
+}
+body section .contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+  color: #fff;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding-bottom: 30px;
+  margin-bottom: 30px;
+  overflow-y: hidden;
+}
+body section .contact .head {
+  text-align: center;
+  padding: 15px;
+}
+body section .contact .head h3 {
+  color: #635985;
+  font-size: 35px;
+  font-weight: 600;
+  text-shadow: 0px 0px 18px #635985;
+}
+body section .contact .head p {
+  font-size: 18px;
+  font-weight: 800;
+  text-transform: capitalize;
+}
+body section .contact .text {
+  display: flex;
+}
+body section .contact .text .icon-text {
+  margin: 25px;
+  text-align: center;
+}
+body section .contact .text .icon-text i {
+  font-size: 35px;
+  color: #635985;
+}
+body section .contact .text .icon-text p {
+  font-size: 18px;
+  padding-top: 15px;
+}
+body section .contact .text .icon-text a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 12px;
+  transition: all 1s ease 0s;
+}
+body section .contact .text .icon-text a:hover {
+  color: #635985;
+}
+body section .contact .text .icon-text .num {
+  letter-spacing: 2px;
+}
+body section .text {
+  margin: 20px;
+  padding: 15px;
+  color: #fff;
+}
+body section .text h3 {
+  font-size: 25px;
+  padding-bottom: 15px;
+}
+body section .text h3 span {
+  font-size: 35px;
+  color: #635985;
+}
+body section .text p {
+  font-size: 14px;
+  opacity: 85%;
+}
+body section .about {
+  margin: 20px;
+  padding: 15px;
+  color: #fff;
+}
+body section .about .list p {
+  color: #635985;
+  font-size: 17px;
+  font-weight: 600;
+}
+body section .about .list p span {
+  color: #fff;
+  font-size: 15px;
+  font-weight: 400;
+  opacity: 85%;
+}
+body section .about .list button {
+  background-color: #151515;
+  border: 3px solid #635985;
+  padding: 13px 20px;
+  color: #fff;
+  font-size: 18px;
+  transition: all 1s ease 0s;
+  box-shadow: 0px 0px 18px #635985;
+  margin: 30px 0px;
+}
+body section .about .list button a {
+  text-decoration: none;
+  color: #fff;
+}
+body section .about .list button:hover {
+  letter-spacing: 5px;
+  transition: all 1s ease 0s;
+  box-shadow: 0px 0px 18px #fff;
+  background-color: #222222;
+}
+body section .row {
+  margin: 15px;
+}
+body section .row .edu .title h4 {
+  color: white;
+  font-size: 45px;
+  font-weight: 400;
+  padding: 20px;
+  border-bottom: 2px solid #635985;
+  letter-spacing: 2px;
+}
+body section .row .edu .text span {
+  color: #635985;
+  font-size: 15px;
+  font-weight: 600;
+}
+body section .row .edu .text h5 {
+  opacity: 85%;
+  font-size: 20px;
+}
+body section .row .edu .text h5 .span-h5 {
+  font-size: 25px;
+  font-weight: 800;
+  color: #635985;
+}
+body section .row .edu .text p {
+  color: #b4aec9;
+}
+body section .project {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+  padding: 15px;
+  overflow: hidden;
+}
+body section .project ul li button {
+  color: #fff;
+  opacity: 85%;
+  font-size: 20px;
+}
+body section .project .tab-content .tab-pane .row .col-xl-5 .card {
+  margin-left: 40px;
+  margin-bottom: 45px;
+  border: 4px solid #b4aec9;
+  border-radius: 15px;
+  width: 100% !important;
+  background-color: #222222;
+  text-align: center;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 1s ease-in-out 0s;
+}
+body section .project .tab-content .tab-pane .row .col-xl-5 .card:hover {
+  box-shadow: 0px 0px 18px #fff;
+  transform: rotate(-1.5deg);
+}
+body section .project .tab-content .tab-pane .row .col-xl-5 .card img {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  transition: all 1s ease 0s;
+}
+body section .project .tab-content .tab-pane .row .col-xl-5 .card img:hover {
+  transition: all 1s ease 0s;
+  transform: scale(1.1);
+}
+body section .project .tab-content .tab-pane .row .col-xl-5 .card a {
+  text-decoration: none;
+  color: #fff;
+  opacity: 85%;
+  font-size: 35px;
+  cursor: pointer;
+  transition: all 1s ease 0s;
+  padding: 15px;
+}
+body section .project .tab-content .tab-pane .row .col-xl-5 .card a:hover {
+  color: #635985;
+  transition: all 1s ease 0s;
+  transform: scale(2);
+}
+
+@keyframes btn2 {
+  from {
+    letter-spacing: 5px;
+  }
+  to {
+    letter-spacing: 0px;
+  }
+}
+@keyframes btn {
+  from {
+    letter-spacing: 0px;
+  }
+  to {
+    letter-spacing: 5px;
+  }
+}
+@keyframes go {
+  0% {
+    width: 100px;
+  }
+  50% {
+    width: 535px;
+  }
+  100% {
+    width: 100px;
+  }
+}
+@media (min-width: 901px) and (max-width: 1150px) {
+  body .row .aside {
+    width: 19%;
+  }
+  body .row .aside aside {
+    margin-bottom: 20px;
+  }
+  body .row .aside aside .logo a {
+    font-size: 2.3rem;
+    padding: 10px 5px;
+  }
+  body .row .aside aside .logo a span {
+    font-size: 3rem;
+  }
+  body .row .aside aside .link {
+    margin-top: 45px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  body .row .aside aside .link ul li a {
+    font-size: 1rem;
+    padding-block: 10px;
+  }
+  body .row .aside .link ul {
+    padding: 0 8px;
+    margin-top: 0px !important;
+  }
+  body .row .aside .link ul li a {
+    font-size: 1.1rem;
+    padding-block: 0px;
+    margin: 10px 5px;
+  }
+  body .row .main main {
+    width: 77.3%;
+    height: 100vh;
+    padding: 15px;
+  }
+  body .row .main main .text {
+    width: 50%;
+    padding: 10px;
+    padding-left: 20px;
+  }
+  body .row .main main .text .name {
+    font-size: 1.1rem;
+    font-weight: 400;
+  }
+  body .row .main main .text .name span {
+    font-size: 1.9rem;
+  }
+  body .row .main main .text .go {
+    width: 310px;
+  }
+  body .row .main main .text .go h1 {
+    font-size: 1.2rem;
+    width: 400px;
+  }
+  body .row .main main .text .go h1 span {
+    font-size: 1.5rem;
+  }
+  body .row .main section {
+    width: 78.3%;
+  }
+  body .row .main section .title {
+    margin: 35px;
+  }
+  body .row .main section .skills {
+    margin: 25px;
+  }
+  body .row .main section .skills .card {
+    width: 25%;
+    padding: 5px;
+  }
+  body .row .main section .contact .head {
+    padding: 10px;
+  }
+  body .row .main section .contact .head h3 {
+    font-size: 2rem;
+  }
+  body .row .main section .contact .head p {
+    font-size: 1.2rem;
+  }
+  body .row .main section .contact .text {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  body .row .main section .contact .text .icon-text {
+    margin: 35px;
+  }
+  body .row .main section .contact .text .icon-text p {
+    font-size: 1rem;
+  }
+  body .row .main section .contact .text .icon-text a {
+    font-size: 0.9rem;
+  }
+  body .row .main section .text {
+    margin: 20px;
+    padding: 30px;
+  }
+  body .row .main section .text h3 {
+    font-size: 1.3rem;
+  }
+  body .row .main section .text h3 span {
+    font-size: 1.7rem;
+  }
+  body .row .main section .text p {
+    font-size: 0.9rem;
+  }
+  body .row .main section .about .list {
+    width: 35%;
+    margin: 10px;
+    padding: 20px;
+  }
+  body .row .main section .about .list p {
+    font-size: 1.1rem;
+  }
+  body .row .main section .about .list p span {
+    font-size: 0.9rem;
+  }
+  body .row .main section .row {
+    width: 85%;
+  }
+  body .row .main section .row .edu {
+    padding: 0px;
+    width: 100%;
+  }
+  body .row .main section .row .edu title h4 {
+    font-size: 1.2rem;
+  }
+  body .row .main section .row .edu .text span {
+    font-size: 0.9rem;
+  }
+  body .row .main section .row .edu .text h5 {
+    font-size: 0.9rem;
+  }
+  body .row .main section .row .edu .text h5 .span-h5 {
+    font-size: 1.2rem;
+  }
+  body .row .main section .project .tab-pane .row {
+    margin: 20px 0px;
+  }
+  body .row .main section .project .tab-pane .row .card-xl-5 .card {
+    margin: 20px auto;
+  }
+  @keyframes go {
+    0% {
+      width: 50px;
+    }
+    50% {
+      width: 310px;
+    }
+    100% {
+      width: 50px;
+    }
+  }
+}
+@media (min-width: 450px) and (max-width: 900px) {
+  body {
+    overflow-x: hidden;
+  }
+  body .navbar {
+    display: block !important;
+  }
+  body .row .aside {
+    display: none !important;
+  }
+  body .row #particles-js {
+    height: 100%;
+  }
+  body .row .main main {
+    width: 100%;
+    height: -moz-fit-content;
+    height: fit-content;
+    padding-top: 45px;
+    margin-top: 45px;
+  }
+  body .row .main main .text {
+    width: 85%;
+    padding: 30px 0px;
+  }
+  body .row .main main .text .name {
+    font-size: 19px;
+  }
+  body .row .main main .text .name span {
+    font-size: 30px;
+    color: #635985;
+    font-weight: 400;
+    font-family: "Cinzel", serif;
+  }
+  body .row .main main .text .go {
+    width: 310px;
+  }
+  body .row .main main .text .go h1 {
+    font-size: 1.2rem;
+  }
+  body .row .main main .text .go h1 span {
+    font-size: 1.5rem;
+  }
+  body .row .main main .text .body {
+    padding-bottom: 10px;
+  }
+  body .row .main main .img {
+    width: 65%;
+  }
+  body .row .main section {
+    width: 100%;
+    height: 100vh;
+    padding-top: 15px;
+  }
+  body .row .main section .title {
+    margin-top: 25px;
+    padding-top: 45px;
+  }
+  body .row .main section .title h2 {
+    font-size: 2rem;
+  }
+  body .row .main section .title .span-h2 {
+    font-size: 60px;
+    top: 100px;
+    left: 60px;
+  }
+  body .row .main section .skills .card {
+    width: 40%;
+  }
+  body .row .main section .contact {
+    width: 100%;
+  }
+  body .row .main section .contact .head h3 {
+    font-size: 20px;
+  }
+  body .row .main section .contact .head p {
+    font-size: 17px;
+  }
+  body .row .main section .contact .text {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  body .row .main section .contact .text .icon-text {
+    padding: 20px;
+    margin: 25px;
+  }
+  body .row .main section .about {
+    margin: 13px;
+    padding: 8px;
+    width: 95%;
+  }
+  body .row .main section .about .list p {
+    font-size: 20px;
+    margin: 20px;
+  }
+  body .row .main section .about .list p span {
+    font-size: 19px;
+  }
+  body .row .main section .about .list button {
+    font-size: 20px;
+    margin: 30px;
+  }
+  body .row .main section .row {
+    width: 85%;
+    padding-inline: 0px;
+  }
+  body .row .main section .row .edu {
+    width: 85%;
+    padding: 0px;
+  }
+  body .row .main section .row .edu title h4 {
+    font-size: 1.2rem;
+  }
+  body .row .main section .row .edu .text span {
+    font-size: 0.9rem;
+  }
+  body .row .main section .row .edu .text h5 {
+    font-size: 1.4rem;
+  }
+  body .row .main section .row .edu .text h5 .span-h5 {
+    font-size: 1.8rem;
+  }
+  body .row .main section .project ul li button {
+    font-size: 15px;
+    text-align: center;
+  }
+  body .row .main section .project .tab-content {
+    width: 100%;
+  }
+  body .row .main section .project .tab-content .tab-pane .row {
+    width: 85%;
+    margin: 0px auto;
+  }
+  body .row .main section .project .tab-content .tab-pane .row .col-xl-5 {
+    text-align: center;
+    width: 95%;
+    padding: 0px;
+  }
+  body .row .main section .project .tab-content .tab-pane .row .col-xl-5 .card {
+    margin-left: 0px !important;
+  }
+  @keyframes go {
+    0% {
+      width: 50px;
+    }
+    50% {
+      width: 310px;
+    }
+    100% {
+      width: 50px;
+    }
+  }
+}
+@media (min-width: 150px) and (max-width: 449px) {
+  body .navbar {
+    display: block !important;
+  }
+  body .row .aside {
+    display: none !important;
+  }
+  body .row #particles-js {
+    height: 100%;
+  }
+  body .row .main main {
+    width: 100%;
+    height: -moz-fit-content;
+    height: fit-content;
+    padding-top: 40px;
+    margin-top: 45px;
+  }
+  body .row .main main .text {
+    width: 85%;
+    padding: 45px 0px;
+  }
+  body .row .main main .text .name {
+    font-size: 18px;
+  }
+  body .row .main main .text .name span {
+    font-size: 25px;
+    color: #635985;
+    font-weight: 400;
+    font-family: "Cinzel", serif;
+  }
+  body .row .main main .text .go {
+    width: 245px;
+    padding: 0px 10px;
+  }
+  body .row .main main .text .go h1 {
+    font-size: 17px;
+  }
+  body .row .main main .text .go h1 span {
+    font-size: 20px;
+    color: #635985;
+    font-weight: 400;
+    font-family: "Cinzel", serif;
+  }
+  body .row .main main .text .body {
+    padding-bottom: 10px;
+  }
+  body .row .main main .text .button a {
+    font-size: 16px;
+  }
+  body .row .main main .img {
+    margin: 20px 0px;
+    width: 80%;
+  }
+  body .row .main section {
+    width: 100% !important;
+    height: -moz-fit-content;
+    height: fit-content;
+    padding-top: 15px;
+    overflow: hidden;
+  }
+  body .row .main section .title {
+    margin-top: 25px;
+    padding-top: 45px;
+  }
+  body .row .main section .title h2 {
+    font-size: 1.5rem;
+  }
+  body .row .main section .title .span-h2 {
+    font-size: 35px;
+    top: 110px;
+    left: 20px;
+  }
+  body .row .main section .skills .card {
+    width: 95%;
+  }
+  body .row .main section .contact {
+    width: 100%;
+  }
+  body .row .main section .contact .head h3 {
+    font-size: 17px;
+  }
+  body .row .main section .contact .head p {
+    font-size: 14px;
+  }
+  body .row .main section .contact .text {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  body .row .main section .contact .text .icon-text {
+    padding: 13px;
+    margin: 18px;
+  }
+  body .row .main section .text {
+    margin: 13px;
+    padding: 8px;
+  }
+  body .row .main section .text h3 {
+    font-size: 1.4rem;
+  }
+  body .row .main section .text h3 span {
+    font-size: 1.5rem;
+  }
+  body .row .main section .text p {
+    font-size: 0.9rem;
+  }
+  body .row .main section .about .list p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+  }
+  body .row .main section .about .list p span {
+    font-size: 0.9rem;
+  }
+  body .row .main section .about .list button {
+    font-size: 20px;
+    margin-bottom: 35px;
+  }
+  body .row .main section .row {
+    margin: 0px;
+  }
+  body .row .main section .row .edu {
+    width: 95%;
+  }
+  body .row .main section .row .edu .title {
+    margin: 0px;
+    padding: 0px;
+  }
+  body .row .main section .row .edu .title h4 {
+    font-size: 1.2rem;
+  }
+  body .row .main section .row .edu .text span {
+    font-size: 0.9rem;
+  }
+  body .row .main section .row .edu .text h5 {
+    font-size: 0.9rem;
+  }
+  body .row .main section .row .edu .text h5 .span-h5 {
+    font-size: 1.2rem;
+  }
+  body .row .main section .project ul li button {
+    font-size: 15px;
+    text-align: center;
+  }
+  body .row .main section .project .tab-content .tab-pane .row .col-xl-5 {
+    text-align: center;
+    width: 100%;
+    padding: 0px;
+  }
+  body .row .main section .project .tab-content .tab-pane .row .col-xl-5 .card {
+    margin-left: 0px;
+  }
+  body .row .main section .project .tab-content .tab-pane .row .col-xl-5 .card .card-body {
+    padding: 5px;
+  }
+  body .row .main section .project .tab-content .tab-pane .row .col-xl-5 .card .card-body a {
+    padding: 5px;
+    font-size: 1.3rem;
+  }
+  @keyframes go {
+    0% {
+      width: 35px;
+    }
+    50% {
+      width: 250px;
+    }
+    100% {
+      width: 35px;
+    }
+  }
+}/*# sourceMappingURL=style.css.map */

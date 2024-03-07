@@ -1,0 +1,66 @@
+$aside-color : #222222;
+$main-color: #151515;
+$text-color: #fff;
+$color: #635985;
+$font-family-span: "Cinzel", serif;
+$box-shadow: 0px 0px 18px $color;
+$box-shadow-hover: 0px 0px 18px $text-color;
+$btn-hover:lighten($color: $color, $amount: 30%);
+$opacity: 85%;
+@mixin border{
+    border: 3px solid $color;
+    border-top-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+}
+@mixin links($color-link:#fff){
+    text-decoration: none;
+    color: $color-link;
+}
+@mixin size($width:100% , $height:100vh){
+    width: $width;
+    height: $height;
+}
+@mixin position{
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+@mixin flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+@mixin span($font:25px , $font-weight:400){
+    font-size: $font;
+    color: $color;
+    font-weight: $font-weight;
+    font-family: $font-family-span;
+}
+@mixin btn{
+    background-color: $main-color;
+    border: 3px solid $color;
+    padding: 13px 20px;
+    color: $text-color;
+    font-size: 18px;
+    transition: all 1s ease 0s;
+    box-shadow: $box-shadow;
+}
+@mixin btn-hover{
+    letter-spacing: 5px;
+    transition: all 1s ease 0s;
+    box-shadow: $box-shadow-hover;
+    background-color: $aside-color;
+}
+@mixin parag{
+    font-size: 14px;
+    opacity: 85%;
+}
+@mixin tiltle{
+    color: lighten($color: $text-color, $amount: 100%);
+    font-size: 45px;
+    font-weight: 400;
+    padding: 20px;
+    border-bottom: 2px solid $color;       
+}

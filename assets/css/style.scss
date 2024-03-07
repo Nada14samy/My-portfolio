@@ -1,0 +1,1265 @@
+@import './style2';
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: content-box;
+    scroll-behavior: smooth;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    overflow-x: hidden;
+    background-color: $main-color;
+    // Navbar
+    .navbar {
+        display: none;
+        background-color: $aside-color;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        z-index: 9999;
+        .container-fluid {
+            margin: 0 auto;
+            // logo
+            .navbar-brand {
+                text-transform: uppercase;
+                font-size: 2rem;
+                color: $text-color;
+                .name {
+                    color: $color;
+                    font-size: 2.5rem;
+                    font-weight: 600;
+                }
+            }
+            //end logo
+            button {
+                border: 1px solid #635985;
+                background-color: #635985a8;
+                box-shadow: 0px 0px 18px #635985;
+                transition: all 1s ease 0s;
+                margin-right: 40px;
+            }
+            //end button
+            .collapse {
+                margin: 30px;
+                // links
+                .navbar-nav {
+                    .nav-item {
+                        // position: absolute;
+                        list-style: none;
+                        .nav-link {
+                            display: inline-block;
+                            font-size: 0.9rem;
+                            font-weight: 400;
+                            padding-block: 20px;
+                            text-transform: capitalize;
+                            transition: all 1s ease 0s;
+                            text-decoration: none;
+                            color: $text-color;
+                            .fa {
+                                padding-right: 10px
+                            }
+
+                            &:hover {
+                                letter-spacing: 5px;
+                                color: $color;
+                                transition: all 1s ease 0s;
+                            }
+                        }
+                        //link nav
+                    }
+                }
+                //nav links
+            }
+        }
+    }
+
+    //end navbar
+
+    //aside//
+    .row {
+        //aside section//
+        .aside {
+            background-color: $aside-color;
+            @include size($width: 17%);
+            position: fixed;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            z-index: 999;
+            display: block;
+            aside {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                // logo
+                .logo {
+                    margin: 0 auto;
+                    padding-top: 20px;
+                    a {
+                        @include links;
+                        text-transform: uppercase;
+                        font-size: 65px;
+                        padding: 10px;
+
+                        span {
+                            color: $color;
+                            font-size: 80px;
+                            font-weight: 600;
+                        }
+
+                    }
+                }
+                // end logo
+                // links
+                .link {
+                    display: flex;
+
+                    ul {
+                        margin-top: 40px;
+
+                        li {
+                            list-style: none;
+
+                            a {
+                                @include links;
+                                display: inline-block;
+                                font-size: 20px;
+                                font-weight: 400;
+                                padding-block: 20px;
+                                text-transform: capitalize;
+                                transition: all 1s ease-out 0s;
+
+                                .fa {
+                                    padding-right: 10px
+                                }
+
+                                &:hover {
+                                    letter-spacing: 2px;
+                                    color: $color;
+                                    transition: all 1s ease-out 0s;
+                                }
+
+                                &:active {
+                                    color: $color;
+                                }
+                            }
+                        }
+                    }
+                }
+                // end links
+            }
+        }
+        //aside section//
+        //home section//
+        #particles-js {
+            background-color: $main-color;
+            position: fixed;
+            z-index: 1;
+        }
+        .main {
+            main {
+                @include size($width: 81.3%);
+                @include position;
+                @include flex;
+                overflow: hidden;
+                .text {
+                    width: 55%;
+                    color: $text-color;
+                     z-index: 2;
+                    .name {
+                        font-size: 23px;
+                        font-weight: 700;
+                        span {
+                            @include span($font: 35px);
+                        }
+                    }
+                    // animation type
+                    .go {
+                        width: 535px;
+                        overflow: hidden;
+                        height: fit-content;
+                        border-right: 3px solid #fff;
+                        transition: all 10s ease-in-out 10s;
+                        animation: 10s go steps(25)  infinite;
+
+                        h1 {
+                            width: 600px;
+
+                            span {
+                                color: $color;
+                            }
+
+                        }
+                    }
+                    .body {
+                        font-size: 14px;
+                        padding-bottom: 20px;
+                        padding: 20px 0px;
+                    }
+
+                    .button {
+                        @include btn;
+                        animation-name: btn2;
+                        transition: all 2s ease 0s;
+                        box-shadow: 0px 0px 5px $color;
+
+                        a {
+                            @include links;
+                        }
+                        &:hover {
+                            @include btn-hover;
+                            animation-name: btn;
+                        }
+                    }
+                }
+                // img
+                .img {
+                    width: 40%;
+                    transition: all 1s ease 0s;
+                    z-index: 2;
+                    img {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+    //home section//
+    // all section//
+    section {
+        background: $main-color;
+        @include size($width: 81.3%, $height: fit-content);
+        @include position;
+        padding-bottom: 40px;
+
+        //all title section
+        .title {
+            margin: 25px;
+            padding: 10px;
+            width: fit-content;
+            z-index: 555;
+
+            h2 {
+                @include tiltle;
+            }
+
+            .span-h2 {
+                position: absolute;
+                top: 40px;
+                left: 130px;
+                color: #63598531;
+                font-size: 80px;
+                white-space: nowrap;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                z-index: 1;
+                font-weight: 800;
+            }
+        }
+
+        //skills section//
+        .skills {
+            @include flex;
+
+            .card {
+                width: 15%;
+                height: fit-content;
+                padding: 10px;
+                text-align: center;
+                margin: 25px;
+                background-color: lighten($color: $aside-color, $amount: 1%);
+                box-shadow: $box-shadow;
+                border: none;
+                transition: all 1s ease 0s;
+
+                .icon {
+                    padding: 15px;
+                }
+
+                .card-body {
+                    .card-text {
+                        font-size: 23px;
+                        font-weight: 600;
+                        color: $text-color;
+                    }
+                }
+
+                &:hover {
+                    box-shadow: $box-shadow-hover;
+                    transform: scale(1.1);
+
+                }
+            }
+        }
+
+        //contact section//
+        .contact {
+            @include flex;
+            flex-direction: column;
+            color: $text-color;
+            height: fit-content;
+            padding-bottom: 30px;
+            margin-bottom: 30px;
+            overflow-y: hidden;
+            // head in contact section//
+            .head {
+                text-align: center;
+                padding: 15px;
+
+                h3 {
+                    color: $color;
+                    font-size: 35px;
+                    font-weight: 600;
+                    text-shadow: $box-shadow;
+                }
+
+                p {
+                    font-size: 18px;
+                    font-weight: 800;
+                    text-transform: capitalize;
+                }
+            }
+            //icon text in contact section//
+            .text {
+                display: flex;
+                .icon-text {
+                    margin: 25px;
+                    text-align: center;
+
+                    i {
+                        font-size: 35px;
+                        color: $color;
+                    }
+
+                    p {
+                        font-size: 18px;
+                        padding-top: 15px;
+                    }
+                    //all links
+                    a {
+                        @include links;
+                        font-size: 12px;
+                        transition: all 1s ease 0s;
+
+                        &:hover {
+                            color: $color;
+
+                        }
+                    }
+                    // whatsapp
+                    .num {
+                        letter-spacing: 2px;
+                    }
+
+                }
+            }
+        }
+        // End Content
+        //about section//
+        //text in about section//
+        .text {
+            margin: 20px;
+            padding: 15px;
+            color: $text-color;
+
+            h3 {
+                font-size: 25px;
+                padding-bottom: 15px;
+
+                span {
+                    font-size: 35px;
+                    color: $color;
+                }
+            }
+
+            p {
+                @include parag;
+            }
+        }
+        .about {
+            margin: 20px;
+            padding: 15px;
+            color: $text-color;
+            // information
+            .list {
+                p {
+                    color: $color;
+                    font-size: 17px;
+                    font-weight: 600;
+
+                    span {
+                        color: $text-color;
+                        font-size: 15px;
+                        font-weight: 400;
+                        opacity: $opacity;
+                    }
+                }
+
+                button {
+                    @include btn;
+                    margin: 30px 0px;
+
+                    a {
+                        @include links;
+                    }
+
+                    &:hover {
+                        @include btn-hover;
+                    }
+                }
+            }
+            // end information
+        }
+        // Education in about section//
+        .row {
+            margin: 15px;
+            .edu {
+                .title {
+                    h4 {
+                        @include tiltle;
+                        letter-spacing: 2px;
+                    }
+                }
+
+                .text {
+                    span {
+                        color: $color;
+                        font-size: 15px;
+                        font-weight: 600;
+                    }
+
+                    h5 {
+                        opacity: $opacity;
+                        font-size: 20px;
+
+                        .span-h5 {
+                            font-size: 25px;
+                            font-weight: 800;
+                            color: $color;
+                        }
+                    }
+
+                    p {
+                        color: lighten($color: $color, $amount: 30%);
+                    }
+                }
+            }
+        }
+        //end Education in about section//
+        //end about section//
+        //project section//
+        .project {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: 20px;
+            padding: 15px;
+            overflow: hidden;
+            ul {
+                li {
+                    button {
+                        color: $text-color;
+                        opacity: $opacity;
+                        font-size: 20px;
+
+                    }
+                }
+            }
+            //card//
+            .tab-content {
+                .tab-pane {
+                    .row {
+                        .col-xl-5 {
+                            // card project
+                            .card {
+                                margin-left: 40px;
+                                margin-bottom: 45px;
+                                border: 4px solid $btn-hover;
+                                border-radius: 15px;
+                                width: 100% !important;
+                                background-color: $aside-color;
+                                text-align: center;
+                                overflow: hidden;
+                                cursor: pointer;
+                                transition: all 1s ease-in-out 0s;
+
+                                &:hover {
+                                    box-shadow: $box-shadow-hover;
+                                    transform: rotate(-1.5deg);
+                                }
+                                img {
+                                    border-top-left-radius: 10px;
+                                    border-top-right-radius: 10px;
+                                    transition: all 1s ease 0s;
+
+                                    &:hover {
+                                        transition: all 1s ease 0s;
+                                        transform: scale(1.1);
+                                    }
+                                }
+                                a {
+                                    @include links;
+                                    opacity: $opacity;
+                                    font-size: 35px;
+                                    cursor: pointer;
+                                    transition: all 1s ease 0s;
+                                    padding: 15px;
+                                    &:hover {
+                                        color: $color;
+                                        transition: all 1s ease 0s;
+                                        transform: scale(2);
+                                    }
+                                }
+                            }
+                            // end card project
+                        }
+                    }
+
+                }
+            }
+            //end card//
+        }
+        // end section project
+    }
+
+}
+// end body
+//animation button section home//
+@keyframes btn2 {
+    from {
+        letter-spacing: 5px;
+    }
+
+    to {
+        letter-spacing: 0px;
+    }
+}
+// animation button hover section home//
+@keyframes btn {
+    from {
+        letter-spacing: 0px;
+    }
+
+    to {
+        letter-spacing: 5px;
+    }
+}
+
+//animation text type front-end 
+@keyframes go {
+    0% {
+        width: 100px;
+    }
+
+    50% {
+        width: 535px;
+    }
+
+    100% {
+        width: 100px;
+    }
+}
+
+// media labtop width 1150 : 901
+@media (min-width:901px) and (max-width:1150px) {
+    body {
+        .row {
+            // aside
+            .aside {
+                width: 19%;
+                aside {
+                    margin-bottom: 20px;
+                    .logo {
+                        a {
+                            font-size: 2.3rem;
+                            padding: 10px 5px;
+                            span {
+                                font-size: 3rem;
+                            }
+                        }
+                    }
+                    .link{
+                        margin-top: 45px;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        ul{
+                            li{
+                                a{
+                                    font-size: 1rem;
+                                    padding-block: 10px;
+                                }
+                            }
+                        }
+                    }
+                    //end logo
+                }
+                .link {
+                    ul {
+                        padding: 0 8px;
+                        margin-top: 0px !important;
+                        li {
+                            a {
+                                font-size: 1.1rem;
+                                padding-block: 0px;
+                                margin: 10px 5px;
+                            }
+                        }
+                    }
+                }
+
+                //end link
+            }
+            //end aside
+            .main {
+                main {
+                    @include size($width: 77.3%);
+                    padding: 15px;
+                    .text {
+                        width: 50%;
+                        padding: 10px;
+                        padding-left: 20px;
+                        .name {
+                            font-size: 1.1rem;
+                            font-weight: 400;
+                            span {
+                                font-size: 1.9rem;
+                            }
+                        }
+                        //end name
+                        .go {
+                            width: 310px;
+                            h1 {
+                                font-size: 1.2rem;
+                                width: 400px;
+                                span {
+                                    font-size: 1.5rem;
+                                }
+                            }
+                        }
+                    }
+                    //end text
+                }
+                //end home section
+                section {
+                    width: 78.3%;
+                    .title {
+                        margin: 35px;
+                    }
+                    //end title section
+                    .skills {
+                        margin: 25px;
+                        .card {
+                            width: 25%;
+                            padding: 5px;
+                        }
+                        //end card
+                    }
+
+                    //end skills
+                    .contact {
+                        .head {
+                            padding: 10px;
+
+                            h3 {
+                                font-size: 2rem;
+                            }
+
+                            p {
+                                font-size: 1.2rem;
+                            }
+                        }
+
+                        //end head
+                        .text {
+                            display: flex;
+                            flex-wrap: wrap;
+                            justify-content: center;
+                            align-items: center;
+
+                            .icon-text {
+                                margin: 35px;
+
+                                p {
+                                    font-size: 1rem;
+                                }
+
+                                a {
+                                    font-size: 0.9rem;
+                                }
+                            }
+
+                        }
+                    }
+                    //end contact
+                    // text in about section
+                    .text {
+                        margin: 20px;
+                        padding: 30px;
+
+                        h3 {
+                            font-size: 1.3rem;
+
+                            span {
+                                font-size: 1.7rem;
+                            }
+                        }
+
+                        p {
+                            font-size: 0.9rem;
+                        }
+                    }
+                    //end text in about
+                    .about {
+                        .list {
+                            width: 35%;
+                            margin: 10px;
+                            padding: 20px;
+
+                            p {
+                                font-size: 1.1rem;
+
+                                span {
+                                    font-size: 0.9rem;
+                                }
+                            }
+                        }
+                        //end list
+                        //end edu
+                    }
+                    .row {
+                        width: 85%;
+
+                        .edu {
+                            padding: 0px;
+                            width: 100%;
+
+                            title {
+                                h4 {
+                                    font-size: 1.2rem;
+                                }
+                            }
+
+                            .text {
+                                span {
+                                    font-size: 0.9rem;
+                                }
+
+                                h5 {
+                                    font-size: 0.9rem;
+
+                                    .span-h5 {
+                                        font-size: 1.2rem;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    // end about section
+                    //start project
+                    .project{
+                        .tab-pane{
+                            .row{
+                                margin: 20px 0px;
+                                .card-xl-5{
+                                    .card{
+                                        margin: 20px auto;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                //end about
+            }
+            //end col-9
+        }
+        //end row
+    }
+ //end body
+    @keyframes go {
+        0% {
+            width: 50px;
+        }
+    
+        50% {
+            width: 310px;
+        }
+    
+        100% {
+            width: 50px;
+        }
+    }
+   
+}
+
+// media tablet width 900 : 450 
+@media (min-width:450px) and (max-width:900px) {
+    body {
+        overflow-x: hidden;
+        .navbar {
+            display: block !important;
+        }
+        .row {
+            .aside {
+                display: none !important;
+            }
+            #particles-js{
+                height: 100%;
+            }
+            .main {
+                main {
+                    @include size($width: 100%, $height: fit-content);
+                    padding-top: 45px;
+                    margin-top: 45px;
+                    .text {
+                        width: 85%;
+                        padding: 30px 0px;
+                        .name {
+                            font-size: 19px;
+
+                            span {
+                                @include span($font: 30px);
+                            }
+                        }
+                        .go{
+                            width: 310px;
+                            h1 {
+                                font-size: 1.2rem;
+                                span {
+                                    font-size: 1.5rem;
+                                }
+                            }
+    
+                        }
+                       
+                        .body {
+                            padding-bottom: 10px;
+                        }
+                    }
+
+                    .img {
+                        width: 65%;
+                    }
+                }
+
+                section {
+                    @include size($width: 100%);
+                    padding-top: 15px;
+
+                    .title {
+                        margin-top: 25px;
+                        padding-top: 45px;
+
+                        h2 {
+                            font-size: 2rem;
+                        }
+                        .span-h2{
+                            font-size: 60px;
+                            top: 100px;
+                            left: 60px;
+                        }
+                        
+                    }
+
+                    //end title
+                    .skills {
+                        .card {
+                            width: 40%;
+
+                        }
+
+                        //end card
+                    }
+
+                    //end skills
+                    .contact {
+                        width: 100%;
+
+                        .head {
+                            h3 {
+                                font-size: 20px;
+                            }
+
+                            p {
+                                font-size: 17px;
+                            }
+                        }
+
+                        .text {
+                            display: flex;
+                            flex-wrap: wrap;
+                            justify-content: center;
+                            align-items: center;
+
+                            .icon-text {
+                                padding: 20px;
+                                margin: 25px;
+                            }
+                        }
+                    }
+
+                    //end contact
+                    //start about section
+                    .about {
+                        margin: 13px;
+                        padding: 8px;
+                        width: 95%;
+
+                        .list {
+                            p {
+                                font-size: 20px;
+                                // margin-bottom: 30px;
+                                margin: 20px;
+                                span {
+                                    font-size: 19px;
+                                }
+                            }
+                            button {
+                                font-size: 20px;
+                                margin: 30px;
+                            }
+                        }
+                    }
+
+                    .row {
+                        width: 85%;
+                        padding-inline: 0px;
+                        .edu {
+                            width: 85%;
+                            padding: 0px;
+
+                            title {
+                                h4 {
+                                    font-size: 1.2rem;
+                                }
+                            }
+
+                            .text {
+                                span {
+                                    font-size: 0.9rem;
+                                }
+
+                                h5 {
+                                    font-size: 1.4rem;
+
+                                    .span-h5 {
+                                        font-size: 1.8rem;
+                                    }
+                                }
+                            }
+                        }
+
+                        //end edu
+                    }
+
+                    //end about
+                    .project {
+                        ul {
+                            li {
+                                button {
+                                    font-size: 15px;
+                                    text-align: center;
+                                }
+                            }
+                        }
+
+                        //end ul
+                        .tab-content {
+                                width: 100%;
+                                // display: flex;
+                                // justify-content: center;
+                                // align-items: center;
+                            .tab-pane {
+                                .row {
+                                    width: 85%;
+                                    margin: 0px auto;
+                                    .col-xl-5 {
+                                        text-align: center;
+                                        width: 95%;
+                                        padding: 0px;
+                                        .card {
+                                            margin-left: 0px !important;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    //end project
+                }
+
+                //end section
+            }
+
+            //end col-9 .main
+        }
+
+        //end row
+    }
+
+    //end body
+    @keyframes go {
+        0% {
+            width: 50px;
+        }
+    
+        50% {
+            width: 310px;
+        }
+    
+        100% {
+            width: 50px;
+        }
+    }
+}
+// end media tablet
+ //media cell phone width 449 : 150 
+@media (min-width:150px) and (max-width:449px) {
+    body {
+        .navbar {
+            display: block !important;
+        }
+        .row {
+            .aside {
+                display: none !important;
+            }
+            #particles-js{
+                height: 100%;
+            }
+            .main {
+                main {
+                    @include size($width: 100%, $height: fit-content);
+                    padding-top: 40px;
+                    margin-top: 45px;
+
+                    .text {
+                        width: 85%;
+                        padding: 45px 0px;
+                        .name {
+                            font-size: 18px;
+
+                            span {
+                                @include span($font: 25px);
+                            }
+                        }
+                        .go{
+                            width: 245px;
+                            padding: 0px 10px;
+                            h1 {
+                                font-size: 17px;
+                                span {
+                                    @include span($font: 20px);
+                                }
+                            }
+    
+                        }
+                       
+                        .body {
+                            padding-bottom: 10px;
+                        }
+                        .button{
+                            a{
+                                font-size: 16px;
+                            }
+                        }
+                    }
+
+                    .img {
+                        margin: 20px 0px;
+                        width: 80%;
+                    }
+                }
+
+                section {
+                    @include size($width: 100% !important, $height: fit-content);
+                    padding-top: 15px;
+                    overflow: hidden;
+                    .title {
+                        margin-top: 25px;
+                        padding-top: 45px;
+
+                        h2 {
+                            font-size: 1.5rem;
+                        }
+                        .span-h2{
+                            font-size: 35px;
+                            top: 110px;
+                            left: 20px;
+                        }
+                    }
+                    //end title
+                    .skills {
+                        .card {
+                            width: 95%;
+                        }
+
+                        //end card
+                    }
+
+                    //end skills
+                    .contact {
+                        width: 100%;
+
+                        .head {
+                            h3 {
+                                font-size: 17px;
+                            }
+
+                            p {
+                                font-size: 14px;
+                            }
+                        }
+
+                        .text {
+                            display: flex;
+                            flex-wrap: wrap;
+                            justify-content: center;
+                            align-items: center;
+
+                            .icon-text {
+                                padding: 13px;
+                                margin: 18px;
+                            }
+                        }
+                    }
+
+                    //end contact
+                    //start about section
+                    .text {
+                        margin: 13px;
+                        padding: 8px;
+
+                        h3 {
+                            font-size: 1.4rem;
+
+                            span {
+                                font-size: 1.5rem;
+                            }
+                        }
+
+                        p {
+                            font-size: 0.9rem;
+                        }
+                    }
+
+                    .about {
+                        .list {
+                            p {
+                                font-size: 1.2rem;
+                                margin-bottom: 30px;
+
+                                span {
+                                    font-size: 0.9rem;
+                                }
+                            }
+
+                            button {
+                                font-size: 20px;
+                                margin-bottom: 35px;
+                            }
+                        }
+                        //end list
+                    }
+                    .row {
+                        margin: 0px;
+                        .edu {
+                            width: 95%;
+                            .title {
+                                margin: 0px;
+                                padding: 0px;
+                                h4 {
+                                    font-size: 1.2rem;
+                                }
+                            }
+                            .text {
+                                span {
+                                    font-size: 0.9rem;
+                                }
+
+                                h5 {
+                                    font-size: 0.9rem;
+
+                                    .span-h5 {
+                                        font-size: 1.2rem;
+                                    }
+                                }
+                            }
+                        }
+
+                        //end edu
+                    }
+
+                    //end about
+                    .project {
+                        ul {
+                            li {
+                                button {
+                                    font-size: 15px;
+                                    text-align: center;
+                                }
+                            }
+                        }
+
+                        //end ul
+                        .tab-content {
+                            .tab-pane {
+                                .row {
+                                    .col-xl-5 {
+                                        text-align: center;
+                                        width: 100%;
+                                        padding: 0px;
+
+                                        .card {
+                                            margin-left: 0px;
+                                            .card-body{
+                                                padding: 5px;
+                                                a{
+                                                    padding: 5px;
+                                                    font-size: 1.3rem;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    //end project
+                }
+
+                //end section
+            }
+
+            //end col-9 .main
+
+        }
+
+        //end row
+
+    }
+    //end body
+    @keyframes go {
+        0% {
+            width: 35px;
+        }
+    
+        50% {
+            width: 250px;
+        }
+    
+        100% {
+            width: 35px;
+        }
+    }
+}
+
+//end media cell phone 
